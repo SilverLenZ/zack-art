@@ -48,7 +48,7 @@ main,header,footer{position:relative;z-index:2}
 .nav-links{display:flex;gap:clamp(14px,3vw,34px);align-items:center}
 .nav-links a{color:var(--muted);text-decoration:none;font-size:17px;letter-spacing:.02em;transition:color .2s}
 .nav-links a:hover{color:var(--gold)}
-.nav-links .cta{border:1px solid var(--line);border-radius:999px;padding:9px 18px;color:var(--gold)}
+.nav-links .cta{border:1px solid var(--line);border-radius:999px;padding:9px 18px;color:var(--gold);white-space:nowrap}
 .nav-links .cta:hover{background:rgba(240,196,107,.1)}
 @media(max-width:720px){.nav-links a:not(.cta){display:none}}
 
@@ -59,16 +59,16 @@ main,header,footer{position:relative;z-index:2}
 .hero-art img.on{opacity:1;animation:drift 16s ease-in-out infinite alternate}
 @keyframes drift{from{transform:scale(1.02)}to{transform:scale(1.12)}}
 .hero-shade{position:absolute;inset:0;z-index:1;background:
-  linear-gradient(180deg,rgba(7,5,16,.55),rgba(7,5,16,.18) 40%,rgba(7,5,16,.92) 88%)}
+  linear-gradient(180deg,rgba(7,5,16,.66),rgba(7,5,16,.52) 45%,rgba(7,5,16,.94) 88%)
 .hero-inner{position:relative;z-index:2;padding:0 clamp(20px,6vw,80px) clamp(48px,8vh,90px)}
 .kicker{display:inline-flex;align-items:center;gap:10px;margin:0 0 18px;color:var(--gold);
   font:700 14px var(--sans);letter-spacing:.28em;text-transform:uppercase}
 .kicker::before{content:"";width:34px;height:1px;background:var(--gold)}
 h1{margin:0 0 10px;font:clamp(52px,9.5vw,124px)/1.02 var(--serif);font-weight:600;letter-spacing:-.015em;
   text-shadow:0 4px 40px rgba(0,0,0,.6)}
-h1 .thin{display:block;font-size:.42em;color:var(--muted);letter-spacing:.14em;font-weight:400;font-style:italic;margin-top:12px}
-.hero-sub{max-width:640px;margin:26px 0 34px;color:#e8e3d6;font-size:clamp(19px,2.2vw,23px);line-height:1.6;
-  text-shadow:0 2px 18px rgba(0,0,0,.7)}
+h1 .thin{display:block;font-size:.42em;color:#d9d3e6;letter-spacing:.14em;font-weight:400;font-style:italic;margin-top:12px;text-shadow:0 2px 16px rgba(0,0,0,.75)}
+.hero-sub{max-width:640px;margin:26px 0 34px;color:#efeadd;font-size:clamp(19px,2.2vw,23px);line-height:1.6;
+  text-shadow:0 2px 10px rgba(0,0,0,.9),0 0 30px rgba(0,0,0,.6)}
 .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;text-decoration:none;
   font:600 18px var(--sans);letter-spacing:.02em;transition:transform .18s,background .2s,box-shadow .2s}
