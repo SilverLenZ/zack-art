@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#070510">
+<meta name="description" content="The digital art of Zack Covell: 302 works of sacred geometry, sound, symbol and myth, made 2011-2015 and still transmitting.">
+<meta property="og:title" content="Zack Covell - The Pattern Observatory">
+<meta property="og:description" content="302 digital transmissions of sacred geometry, sound and myth.">
+<meta property="og:image" content="https://silverlenz.github.io/daily-art/assets/artworks/full/8209c914.jpg">
+<title>Zack Covell - The Pattern Observatory</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23070510'/%3E%3Cg fill='none' stroke='%23f0c46b' stroke-width='2'%3E%3Ccircle cx='32' cy='32' r='14'/%3E%3Ccircle cx='32' cy='18' r='14'/%3E%3Ccircle cx='32' cy='46' r='14'/%3E%3Ccircle cx='19.9' cy='25' r='14'/%3E%3Ccircle cx='44.1' cy='25' r='14'/%3E%3Ccircle cx='19.9' cy='39' r='14'/%3E%3Ccircle cx='44.1' cy='39' r='14'/%3E%3C/g%3E%3C/svg%3E">
+<style>
+:root{
+  color-scheme: dark;
+  --bg:#070510;
+  --bg2:#0e0a1e;
+  --panel:rgba(20,15,42,.72);
+  --line:rgba(240,196,107,.22);
+  --ink:#f5f1e8;
+  --muted:#b9b2c9;
+  --dim:#7d7694;
+  --gold:#f0c46b;
+  --violet:#9b8cf2;
+  --cyan:#6fd3e7;
+  --serif:"Iowan Old Style",Georgia,"Times New Roman",serif;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:19px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+::selection{background:var(--gold);color:#17110a}
+
+#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
+.veil{position:fixed;inset:0;z-index:1;pointer-events:none;background:
+  radial-gradient(1200px 800px at 80% -10%,rgba(155,140,242,.14),transparent 60%),
+  radial-gradient(1000px 700px at 10% 110%,rgba(111,211,231,.10),transparent 60%)}
+main,header,footer{position:relative;z-index:2}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+  padding:14px clamp(18px,4vw,44px);background:linear-gradient(rgba(7,5,16,.88),rgba(7,5,16,0));backdrop-filter:blur(6px)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .sigil{width:40px;height:40px;flex:none}
+.brand strong{font:600 21px var(--serif);letter-spacing:.04em}
+.nav-links{display:flex;gap:clamp(14px,3vw,34px);align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:17px;letter-spacing:.02em;transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-links .cta{border:1px solid var(--line);border-radius:999px;padding:9px 18px;color:var(--gold)}
+.nav-links .cta:hover{background:rgba(240,196,107,.1)}
+@media(max-width:720px){.nav-links a:not(.cta){display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;overflow:hidden}
+.hero-art{position:absolute;inset:0;z-index:0}
+.hero-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 2.4s ease;filter:saturate(1.05)}
+.hero-art img.on{opacity:1;animation:drift 16s ease-in-out infinite alternate}
+@keyframes drift{from{transform:scale(1.02)}to{transform:scale(1.12)}}
+.hero-shade{position:absolute;inset:0;z-index:1;background:
+  linear-gradient(180deg,rgba(7,5,16,.55),rgba(7,5,16,.18) 40%,rgba(7,5,16,.92) 88%)}
+.hero-inner{position:relative;z-index:2;padding:0 clamp(20px,6vw,80px) clamp(48px,8vh,90px)}
+.kicker{display:inline-flex;align-items:center;gap:10px;margin:0 0 18px;color:var(--gold);
+  font:700 14px var(--sans);letter-spacing:.28em;text-transform:uppercase}
+.kicker::before{content:"";width:34px;height:1px;background:var(--gold)}
+h1{margin:0 0 10px;font:clamp(52px,9.5vw,124px)/1.02 var(--serif);font-weight:600;letter-spacing:-.015em;
+  text-shadow:0 4px 40px rgba(0,0,0,.6)}
+h1 .thin{display:block;font-size:.42em;color:var(--muted);letter-spacing:.14em;font-weight:400;font-style:italic;margin-top:12px}
+.hero-sub{max-width:640px;margin:26px 0 34px;color:#e8e3d6;font-size:clamp(19px,2.2vw,23px);line-height:1.6;
+  text-shadow:0 2px 18px rgba(0,0,0,.7)}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;text-decoration:none;
+  font:600 18px var(--sans);letter-spacing:.02em;transition:transform .18s,background .2s,box-shadow .2s}
+.btn-gold{background:var(--gold);color:#17110a;box-shadow:0 6px 30px rgba(240,196,107,.25)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(240,196,107,.4)}
+.btn-ghost{border:1px solid rgba(245,241,232,.35);color:var(--ink);background:rgba(7,5,16,.35)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.hero-stats{display:flex;gap:clamp(20px,4vw,54px);margin-top:44px;flex-wrap:wrap}
+.stat b{display:block;font:600 clamp(26px,3vw,36px) var(--serif);color:var(--gold)}
+.stat span{color:var(--muted);font-size:15px;letter-spacing:.12em;text-transform:uppercase}
+
+/* ---------- sections ---------- */
+section{padding:clamp(64px,9vh,110px) clamp(20px,6vw,80px)}
+.shell{max-width:1280px;margin:0 auto}
+.sec-kicker{color:var(--cyan);font:700 13px var(--sans);letter-spacing:.3em;text-transform:uppercase;margin:0 0 14px}
+h2{font:clamp(34px,4.6vw,58px)/1.12 var(--serif);font-weight:600;margin:0 0 18px;letter-spacing:-.01em}
+.sec-lede{max-width:680px;color:var(--muted);font-size:20px;margin:0 0 40px}
+
+/* ---------- transmission ---------- */
+.transmission{background:linear-gradient(180deg,transparent,rgba(14,10,30,.75) 18%,rgba(14,10,30,.75) 82%,transparent)}
+.trans-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(30px,5vw,70px);align-items:center}
+@media(max-width:900px){.trans-grid{grid-template-columns:1fr}}
+.frame{position:relative;padding:clamp(14px,2vw,24px);background:linear-gradient(160deg,#1b1435,#0c0920);
+  border:1px solid var(--line);border-radius:18px;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.frame::after{content:"";position:absolute;inset:8px;border:1px solid rgba(240,196,107,.14);border-radius:12px;pointer-events:none}
+.frame img{width:100%;border-radius:8px;background:#fff}
+.frame figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:14px;padding:0 4px}
+.frame figcaption b{font:600 21px var(--serif);color:var(--gold)}
+.frame figcaption span{color:var(--dim);font-size:14px;letter-spacing:.1em}
+.trans-copy h2{margin-bottom:8px}
+.t-label{color:var(--muted);font-size:19px;max-width:520px;margin:0 0 26px}
+.countdown{display:flex;gap:14px;margin:0 0 30px;flex-wrap:wrap}
+.cd-cell{min-width:92px;padding:14px 16px;text-align:center;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+.cd-cell b{display:block;font:600 34px var(--serif);color:var(--cyan)}
+.cd-cell span{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.t-note{color:var(--dim);font-size:15px;max-width:460px}
+
+/* ---------- archive ---------- */
+.grid-tools{display:flex;align-items:center;gap:18px;margin:0 0 30px;flex-wrap:wrap}
+.chip{cursor:pointer;border:1px solid var(--line);background:var(--panel);color:var(--ink);
+  padding:12px 22px;border-radius:999px;font:600 16px var(--sans);transition:border-color .2s,color .2s}
+.chip:hover{border-color:var(--gold);color:var(--gold)}
+.grid-count{color:var(--dim);font-size:15px}
+.masonry{columns:4 260px;column-gap:18px}
+.cell{position:relative;margin:0 0 18px;break-inside:avoid;border-radius:14px;overflow:hidden;cursor:zoom-in;
+  border:1px solid rgba(245,241,232,.08);background:#111;transition:transform .25s,box-shadow .25s}
+.cell:hover{transform:translateY(-4px);box-shadow:0 18px 50px rgba(0,0,0,.5)}
+.cell img{width:100%;height:auto}
+.cell .tag{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 10px;font-size:14px;color:#fff;
+  background:linear-gradient(transparent,rgba(0,0,0,.82));opacity:0;transition:opacity .25s}
+.cell:hover .tag,.cell:focus-visible .tag{opacity:1}
+.center{display:flex;justify-content:center;margin-top:36px}
+
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:100;display:none;background:rgba(4,3,10,.94);backdrop-filter:blur(10px)}
+.lb.open{display:grid;place-items:center;grid-template-rows:1fr auto}
+.lb-stage{display:grid;place-items:center;width:100%;height:100%;padding:26px}
+.lb-stage img{max-width:min(1100px,92vw);max-height:76vh;border-radius:10px;box-shadow:0 30px 90px rgba(0,0,0,.8);background:#fff}
+.lb-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;width:min(1100px,92vw);padding:0 0 26px}
+.lb-title{font:600 22px var(--serif)}
+.lb-title small{display:block;color:var(--dim);font:14px var(--sans);margin-top:2px}
+.lb-title a{color:var(--gold);text-decoration:none;border-bottom:1px dotted var(--gold)}
+.lb-nav{display:flex;gap:10px}
+.lb-btn{cursor:pointer;border:1px solid rgba(245,241,232,.25);background:rgba(20,15,42,.8);color:var(--ink);
+  border-radius:12px;padding:12px 18px;font:600 17px var(--sans)}
+.lb-btn:hover{border-color:var(--gold);color:var(--gold)}
+.lb-close{position:absolute;top:18px;right:22px;font-size:22px;padding:12px 18px}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(30px,5vw,80px);align-items:center}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr}}
+.portrait{position:relative;justify-self:center}
+.portrait img{width:min(360px,80vw);border-radius:50%;border:1px solid var(--line);
+  box-shadow:0 0 0 14px rgba(155,140,242,.08),0 0 0 28px rgba(240,196,107,.05),0 30px 70px rgba(0,0,0,.5)}
+.about-copy p{color:#ddd7c9;font-size:20px;margin:0 0 20px;max-width:640px}
+.about-copy .sig{color:var(--gold);font:italic 21px var(--serif)}
+.facts{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.fact{border:1px solid var(--line);border-radius:14px;padding:14px 20px;background:var(--panel)}
+.fact b{color:var(--gold);font:600 19px var(--serif);display:block}
+.fact span{color:var(--muted);font-size:15px}
+
+/* ---------- support ---------- */
+.support{text-align:center}
+.support .sec-lede{margin-left:auto;margin-right:auto}
+.zap-ring{display:flex;justify-content:center;margin:10px 0 40px}
+.zap-btn{display:grid;place-items:center;width:150px;height:150px;border-radius:50%;text-decoration:none;
+  border:1px solid var(--line);background:radial-gradient(circle at 35% 30%,rgba(240,196,107,.22),rgba(20,15,42,.9));
+  font-size:52px;transition:transform .25s,box-shadow .25s}
+.zap-btn:hover{transform:rotate(-8deg) scale(1.06);box-shadow:0 0 60px rgba(240,196,107,.35)}
+.zap-btn small{position:absolute;margin-top:190px;font:600 14px var(--sans);letter-spacing:.2em;color:var(--gold);text-transform:uppercase}
+.socials{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;max-width:980px;margin:56px auto 0}
+.soc{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:18px 22px;border-radius:14px;
+  border:1px solid rgba(245,241,232,.1);background:var(--panel);text-decoration:none;font:600 17px var(--sans);
+  transition:border-color .2s,transform .2s}
+.soc:hover{border-color:var(--gold);transform:translateY(-2px)}
+.soc span:last-child{color:var(--dim)}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid rgba(245,241,232,.08);padding:44px clamp(20px,6vw,80px);display:flex;
+  justify-content:space-between;gap:18px;flex-wrap:wrap;color:var(--dim);font-size:15px}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--gold)}
+
+@media(prefers-reduced-motion:reduce){
+  .hero-art img.on{animation:none}
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="brand" href="#top" aria-label="Zack Covell - home">
+    <svg class="sigil" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#f0c46b" stroke-width="2"><circle cx="32" cy="32" r="14"/><circle cx="32" cy="18" r="14"/><circle cx="32" cy="46" r="14"/><circle cx="19.9" cy="25" r="14"/><circle cx="44.1" cy="25" r="14"/><circle cx="19.9" cy="39" r="14"/><circle cx="44.1" cy="39" r="14"/></g></svg>
+    <strong>Zack Covell</strong>
+  </a>
+  <nav class="nav-links" aria-label="Sections">
+    <a href="#transmission">Now transmitting</a>
+    <a href="#archive">Archive</a>
+    <a href="#about">About</a>
+    <a class="cta" href="https://silverlenz.github.io/Support-the-Daily-Transmissions/" target="_blank" rel="noopener noreferrer">Support the art ↗</a>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-art" id="heroArt" aria-hidden="true"></div>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="kicker">Sacred geometry · sound · myth</p>
+      <h1>ZACK COVELL<span class="thin">the pattern observatory</span></h1>
+      <p class="hero-sub">Three hundred and two digital works, made between 2011 and 2015 and still moving. Circles, ratios, symbols and sound, drawn from the same quiet mystery - one transmission at a time.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#archive">Enter the archive ↓</a>
+        <a class="btn btn-ghost" href="#transmission">What is transmitting now</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b id="statWorks">302</b><span>works</span></div>
+        <div class="stat"><b>4 hrs</b><span>transmission cadence</span></div>
+        <div class="stat"><b>2011-15</b><span>years made</span></div>
+        <div class="stat"><b>$5-50</b><span>prints</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRANSMISSION -->
+  <section class="transmission" id="transmission">
+    <div class="shell">
+      <div class="trans-grid">
+        <figure class="frame" id="transFrame">
+          <img id="transImg" src="" alt="" width="900" height="900">
+          <figcaption><b id="transTitle">…</b><span id="transNo"></span></figcaption>
+        </figure>
+        <div class="trans-copy">
+          <p class="sec-kicker">Live from the archive</p>
+          <h2>Now transmitting.</h2>
+          <p class="t-label">Every four hours the archive rotates and a different piece steps forward. This is the work on the air right now.</p>
+          <div class="countdown" aria-label="Time until the next transmission">
+            <div class="cd-cell"><b id="cdH">-</b><span>hours</span></div>
+            <div class="cd-cell"><b id="cdM">-</b><span>minutes</span></div>
+            <div class="cd-cell"><b id="cdS">-</b><span>seconds</span></div>
+          </div>
+          <p class="t-note">The rotation runs on the same four-hour cadence as the daily transmissions posted across the social channels. When the counter reaches zero, a new piece takes the frame.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHIVE -->
+  <section id="archive">
+    <div class="shell">
+      <p class="sec-kicker">The full body of work</p>
+      <h2>The archive.</h2>
+      <p class="sec-lede">All 302 works, gathered in one room. Wander in order, or let the shuffle rearrange the walls. Open any piece to see it at full size.</p>
+      <div class="grid-tools">
+        <button class="chip" id="shuffleBtn" type="button">✦ Shuffle the walls</button>
+        <button class="chip" id="orderBtn" type="button">↺ Back to archive order</button>
+        <span class="grid-count" id="gridCount"></span>
+      </div>
+      <div class="masonry" id="grid"></div>
+      <div class="center"><button class="chip" id="moreBtn" type="button">Load more artwork</button></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="shell about-grid">
+      <div class="portrait"><img src="https://silverlenz.github.io/daily-art/assets/portraits/zack.webp" alt="Portrait of Zack Covell" width="360" height="360" loading="lazy"></div>
+      <div class="about-copy">
+        <p class="sec-kicker">The artist</p>
+        <h2>Following the lines inward.</h2>
+        <p>I am Zack Covell. These works began as a practice of attention: a line meets a circle, a ratio turns into a rhythm, and suddenly the pattern is looking back at you. Sacred geometry, music, myth and the natural world are different doors into the same room.</p>
+        <p>Some pieces are precise and diagrammatic. Others open into color, symbol and dream. All of them are digital - drawn, built and tuned by hand between 2011 and 2015 - and all of them are still asking the same question: what resonates?</p>
+        <p>Many works are available as high-quality prints, priced from $5 to $50. My wife, Maria Virginia - "SilverLOVECat" - paints original canvases alongside this digital practice.</p>
+        <p class="sig">Trace the lines inward. Stay with what resonates.</p>
+        <div class="facts">
+          <div class="fact"><b>Digital, by hand</b><span>never generated</span></div>
+          <div class="fact"><b>Prints $5-50</b><span>high quality</span></div>
+          <div class="fact"><b>+ canvas works</b><span>by Maria Virginia</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORT -->
+  <section class="support" id="support">
+    <div class="shell">
+      <p class="sec-kicker">Keep the art moving</p>
+      <h2>Zap ⚡ if it resonates.</h2>
+      <p class="sec-lede">The art goes out in regular transmissions, free for everyone. If a piece stays with you, share it, follow along, or send a zap - instant, no fees, no account required.</p>
+      <div class="zap-ring">
+        <a class="zap-btn" href="https://silverlenz.github.io/zack-zaps/" target="_blank" rel="noopener noreferrer" aria-label="Zap Zack on Nostr">⚡<small>Zap now</small></a>
+      </div>
+      <div class="hero-cta" style="justify-content:center">
+        <a class="btn btn-gold" href="https://silverlenz.github.io/Support-the-Daily-Transmissions/" target="_blank" rel="noopener noreferrer">Support the transmissions ↗</a>
+      </div>
+      <nav class="socials" aria-label="Follow Zack">
+        <a class="soc" href="https://x.com/zackcovell" target="_blank" rel="noopener noreferrer"><span>X / Twitter</span><span>↗</span></a>
+        <a class="soc" href="https://bsky.app/profile/silverlenz.bsky.social" target="_blank" rel="noopener noreferrer"><span>Bluesky</span><span>↗</span></a>
+        <a class="soc" href="https://mastodon.social/@silverlenz" target="_blank" rel="noopener noreferrer"><span>Mastodon</span><span>↗</span></a>
+        <a class="soc" href="https://www.instagram.com/zacovell" target="_blank" rel="noopener noreferrer"><span>Instagram</span><span>↗</span></a>
+        <a class="soc" href="https://primal.net/p/nprofile1qqsqvrldzh7pcafe69knhu8lwk5l9g8uk8dyuea8l6z95t5q667h0egw4nc7y" target="_blank" rel="noopener noreferrer"><span>Nostr</span><span>↗</span></a>
+        <a class="soc" href="https://www.tumblr.com/silverlenz" target="_blank" rel="noopener noreferrer"><span>Tumblr</span><span>↗</span></a>
+        <a class="soc" href="https://www.facebook.com/covellz/" target="_blank" rel="noopener noreferrer"><span>Facebook</span><span>↗</span></a>
+        <a class="soc" href="https://www.linkedin.com/in/covellz/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><span>↗</span></a>
+        <a class="soc" href="https://www.threads.com/@zacovell" target="_blank" rel="noopener noreferrer"><span>Threads</span><span>↗</span></a>
+        <a class="soc" href="https://pixelfed.social/silverlenz" target="_blank" rel="noopener noreferrer"><span>Pixelfed</span><span>↗</span></a>
+        <a class="soc" href="http://zackcovell.com/" target="_blank" rel="noopener noreferrer"><span>zackcovell.com</span><span>↗</span></a>
+        <a class="soc" href="https://silverlenz.github.io/daily-art/" target="_blank" rel="noopener noreferrer"><span>Daily transmissions</span><span>↗</span></a>
+      </nav>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© Zack Covell · Sacred geometry · Daily transmissions</span>
+  <span><a href="https://silverlenz.carrd.co/#privacy" target="_blank" rel="noopener noreferrer">Privacy policy ↗</a></span>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Artwork viewer">
+  <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Close viewer">✕</button>
+  <div class="lb-stage"><img id="lbImg" src="" alt=""></div>
+  <div class="lb-bar">
+    <div class="lb-title"><span id="lbTitle"></span><small id="lbMeta"></small></div>
+    <div class="lb-nav">
+      <button class="lb-btn" id="lbPrev" type="button" aria-label="Previous artwork">← Prev</button>
+      <button class="lb-btn" id="lbNext" type="button" aria-label="Next artwork">Next →</button>
+    </div>
+  </div>
+</div>
+
+<script>
+"use strict";
+const ORIGIN="https://silverlenz.github.io/daily-art/";
+const FALLBACK=[{"n":232,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/4787727051720.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/4787727051720.webp","title":"Prismatic Oracle","source":null},{"n":287,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/bddf5805-0078-4353-a47b-3a0cb8438281.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/bddf5805-0078-4353-a47b-3a0cb8438281.webp","title":"Azure Threshold","source":null},{"n":239,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/4846528921730.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/4846528921730.webp","title":"Hexagram Study","source":"https://primal.net/p/nprofile1qqsqvrldzh7pcafe69knhu8lwk5l9g8uk8dyuea8l6z95t5q667h0egw4nc7y"},{"n":261,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/57434f19-8fab-426e-8320-33b8c6baf71a.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/57434f19-8fab-426e-8320-33b8c6baf71a.webp","title":"Hollow Oracle","source":null},{"n":301,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/img_7f10ac35c575.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/img_7f10ac35c575.webp","title":"Azure Nexus","source":null},{"n":98,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/1581207288800665.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/1581207288800665.webp","title":"Electric Current","source":null},{"n":95,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/1563940870527307.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/1563940870527307.webp","title":"Midnight Bloom","source":"https://primal.net/p/nprofile1qqsqvrldzh7pcafe69knhu8lwk5l9g8uk8dyuea8l6z95t5q667h0egw4nc7y"},{"n":263,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/6768d2d6-4201-4936-9fcc-90f776799884.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/6768d2d6-4201-4936-9fcc-90f776799884.webp","title":"Hollow Signal","source":null},{"n":244,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/4895899995976.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/4895899995976.webp","title":"Echoing Threshold","source":null},{"n":96,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/1565326420388752.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/1565326420388752.webp","title":"Electric Pulse","source":null},{"n":49,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/10203159804256595.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/10203159804256595.webp","title":"Crimson Oracle","source":null},{"n":229,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/4719948997311.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/4719948997311.webp","title":"Quantum Spiral","source":null},{"n":156,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/2990008829888.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/2990008829888.webp","title":"Reason Ascent","source":"https://primal.net/p/nprofile1qqsqvrldzh7pcafe69knhu8lwk5l9g8uk8dyuea8l6z95t5q667h0egw4nc7y"},{"n":73,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/10205920849841009.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/10205920849841009.webp","title":"Solar Nexus","source":null},{"n":47,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/10202661341635341.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/10202661341635341.webp","title":"Crimson Drift","source":null},{"n":276,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/9715189b-538f-461d-8054-d04e4f6cf4be.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/9715189b-538f-461d-8054-d04e4f6cf4be.webp","title":"Golden Signal","source":null},{"n":22,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/10200980825303483.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/10200980825303483.webp","title":"Velvet Bloom","source":null},{"n":203,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/4105195348854.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/4105195348854.webp","title":"Celestial Nexus","source":null},{"n":81,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/10214077856961089.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/10214077856961089.webp","title":"Rainbow Eye","source":"https://primal.net/p/nprofile1qqsqvrldzh7pcafe69knhu8lwk5l9g8uk8dyuea8l6z95t5q667h0egw4nc7y"},{"n":8,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/10200292986387940.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/10200292986387940.webp","title":"Astral Horizon","source":null},{"n":271,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/85fd885d-dc70-4960-8e82-289b482cea1f.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/85fd885d-dc70-4960-8e82-289b482cea1f.webp","title":"Hollow Spiral","source":null},{"n":33,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/10201131566271913.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/10201131566271913.webp","title":"Lunar Drift","source":null},{"n":31,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/10201125879289742.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/10201125879289742.webp","title":"Triple Vision","source":"https://primal.net/p/nprofile1qqsqvrldzh7pcafe69knhu8lwk5l9g8uk8dyuea8l6z95t5q667h0egw4nc7y"},{"n":19,"thumb":"https://silverlenz.github.io/daily-art/assets/artworks/thumbs/10200950498065321.webp","full":"https://silverlenz.github.io/daily-art/assets/artworks/full/10200950498065321.webp","title":"Velvet Drift","source":null}];
+
+const state={works:[],order:[],rendered:0,lbIndex:0};
+const BATCH=24;
+
+/* ---------- data ---------- */
+async function loadWorks(){
+  try{
+    const [idx,titles]=await Promise.all([
+      fetch(ORIGIN+"assets/artworks/index.json").then(r=>{if(!r.ok)throw 0;return r.json()}),
+      fetch(ORIGIN+"assets/artworks/titles.json").then(r=>{if(!r.ok)throw 0;return r.json()})
+    ]);
+    return idx.map(e=>{
+      const t=titles[String(e.archiveIndex)]||{};
+      return {n:e.archiveIndex,
+        thumb:ORIGIN+e.thumb, full:ORIGIN+e.full,
+        title:t.title||("Transmission #"+e.archiveIndex),
+        source:(t.source&&t.source.startsWith("http"))?t.source:null};
+    });
+  }catch(_){ return FALLBACK.slice(); }
+}
+
+/* ---------- starfield ---------- */
+(function stars(){
+  const c=document.getElementById("stars"),x=c.getContext("2d");
+  const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let W,H,pts=[];
+  function size(){W=c.width=innerWidth;H=c.height=innerHeight;
+    pts=Array.from({length:Math.min(160,W/9)},()=>({x:Math.random()*W,y:Math.random()*H,
+      r:Math.random()*1.3+.3,p:Math.random()*Math.PI*2,s:.4+Math.random()*.8}));}
+  addEventListener("resize",size);size();
+  function draw(t){x.clearRect(0,0,W,H);
+    for(const s of pts){const a=.25+.55*Math.abs(Math.sin(t/1400*s.s+s.p));
+      x.globalAlpha=a;x.fillStyle="#e9e2f5";x.beginPath();x.arc(s.x,s.y,s.r,0,7);x.fill();}
+    x.globalAlpha=1; if(!reduced)requestAnimationFrame(draw);}
+  draw(0);
+})();
+
+/* ---------- hero ---------- */
+function initHero(works){
+  const box=document.getElementById("heroArt");
+  const seed=Math.floor(Date.now()/144e4); // changes with each 4h slot
+  const picks=[];
+  for(let i=0;i<6;i++) picks.push(works[(seed*7+i*53)%works.length]);
+  picks.forEach((w,i)=>{
+    const im=new Image(); im.src=w.full; im.alt="";
+    if(i===0)im.classList.add("on");
+    box.appendChild(im);
+  });
+  let cur=0;
+  setInterval(()=>{
+    const imgs=box.children;
+    imgs[cur].classList.remove("on");
+    cur=(cur+1)%imgs.length;
+    imgs[cur].classList.add("on");
+  },7000);
+}
+
+/* ---------- transmission ---------- */
+function initTransmission(works){
+  const SLOT=4*3600*1000;
+  const img=document.getElementById("transImg"),
+        ttl=document.getElementById("transTitle"),
+        no=document.getElementById("transNo");
+  function show(){
+    const slot=Math.floor(Date.now()/SLOT);
+    const w=works[slot%works.length];
+    img.src=w.full;
+    img.alt=w.title+" - digital artwork by Zack Covell";
+    ttl.textContent=w.title;
+    no.textContent="TRANSMISSION #"+w.n+" / "+works.length;
+  }
+  function tick(){
+    const next=(Math.floor(Date.now()/SLOT)+1)*SLOT;
+    let d=Math.max(0,next-Date.now());
+    const h=Math.floor(d/36e5),m=Math.floor(d%36e5/6e4),s=Math.floor(d%6e4/1e3);
+    document.getElementById("cdH").textContent=h;
+    document.getElementById("cdM").textContent=String(m).padStart(2,"0");
+    document.getElementById("cdS").textContent=String(s).padStart(2,"0");
+    if(d<1000)setTimeout(show,1200);
+  }
+  show(); tick(); setInterval(tick,1000);
+}
+
+/* ---------- archive grid ---------- */
+function cellEl(w,i){
+  const d=document.createElement("div");
+  d.className="cell"; d.tabIndex=0; d.setAttribute("role","button");
+  d.setAttribute("aria-label","Open "+w.title);
+  const im=new Image(); im.loading="lazy"; im.decoding="async";
+  im.src=w.thumb; im.alt=w.title;
+  const tag=document.createElement("div"); tag.className="tag";
+  tag.textContent="#"+w.n+" · "+w.title;
+  d.append(im,tag);
+  d.addEventListener("click",()=>openLB(i));
+  d.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openLB(i);}});
+  return d;
+}
+function renderBatch(){
+  const grid=document.getElementById("grid");
+  const end=Math.min(state.rendered+BATCH,state.order.length);
+  const frag=document.createDocumentFragment();
+  for(let i=state.rendered;i<end;i++) frag.appendChild(cellEl(state.order[i],i));
+  grid.appendChild(frag);
+  state.rendered=end;
+  document.getElementById("gridCount").textContent=
+    "Showing "+end+" of "+state.order.length+" works";
+  document.getElementById("moreBtn").style.display=end>=state.order.length?"none":"";
+}
+function resetGrid(order){
+  state.order=order; state.rendered=0;
+  document.getElementById("grid").innerHTML="";
+  renderBatch();
+}
+function initGrid(works){
+  document.getElementById("statWorks").textContent=works.length;
+  resetGrid(works.slice());
+  document.getElementById("moreBtn").addEventListener("click",renderBatch);
+  document.getElementById("shuffleBtn").addEventListener("click",()=>{
+    const a=works.slice();
+    for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
+    resetGrid(a);
+  });
+  document.getElementById("orderBtn").addEventListener("click",()=>resetGrid(works.slice()));
+}
+
+/* ---------- lightbox ---------- */
+const lb=document.getElementById("lb"),lbImg=document.getElementById("lbImg"),
+      lbTitle=document.getElementById("lbTitle"),lbMeta=document.getElementById("lbMeta");
+function openLB(i){
+  state.lbIndex=i;
+  const w=state.order[i];
+  lbImg.src=w.full;
+  lbImg.alt=w.title+" - digital artwork by Zack Covell";
+  lbTitle.innerHTML="";
+  if(w.source){
+    const a=document.createElement("a");a.href=w.source;a.target="_blank";a.rel="noopener noreferrer";
+    a.textContent=w.title;lbTitle.appendChild(a);
+  }else lbTitle.textContent=w.title;
+  lbMeta.textContent="Work #"+w.n+" of "+state.works.length+" · prints $5-50";
+  lb.classList.add("open");
+  document.body.style.overflow="hidden";
+  document.getElementById("lbClose").focus();
+}
+function closeLB(){lb.classList.remove("open");document.body.style.overflow="";}
+function stepLB(d){
+  const n=state.order.length;
+  openLB((state.lbIndex+d+n)%n);
+}
+document.getElementById("lbClose").addEventListener("click",closeLB);
+document.getElementById("lbPrev").addEventListener("click",()=>stepLB(-1));
+document.getElementById("lbNext").addEventListener("click",()=>stepLB(1));
+lb.addEventListener("click",e=>{if(e.target===lb||e.target.classList.contains("lb-stage"))closeLB();});
+addEventListener("keydown",e=>{
+  if(!lb.classList.contains("open"))return;
+  if(e.key==="Escape")closeLB();
+  if(e.key==="ArrowLeft")stepLB(-1);
+  if(e.key==="ArrowRight")stepLB(1);
+});
+
+/* ---------- boot ---------- */
+loadWorks().then(works=>{
+  state.works=works;
+  initHero(works);
+  initTransmission(works);
+  initGrid(works);
+});
+</script>
+</body>
+</html>
