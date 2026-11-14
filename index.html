@@ -162,7 +162,9 @@ h2{font:clamp(34px,4.6vw,58px)/1.12 var(--serif);font-weight:600;margin:0 0 18px
 .socials{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;max-width:980px;margin:56px auto 0}
 .soc{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:18px 22px;border-radius:14px;
   border:1px solid rgba(245,241,232,.1);background:var(--panel);text-decoration:none;font:600 17px var(--sans);
-  transition:border-color .2s,transform .2s}
+  transition:border-color .2s,transform .2s;min-width:0}
+.soc span:first-child{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.soc span:last-child{flex:none}
 .soc:hover{border-color:var(--gold);transform:translateY(-2px)}
 .soc span:last-child{color:var(--dim)}
 
@@ -189,7 +191,7 @@ footer a:hover{color:var(--gold)}
     <strong>Zack Covell</strong>
   </a>
   <nav class="nav-links" aria-label="Sections">
-    <a href="#transmission">Now transmitting</a>
+    <a href="#transmission">The rotation</a>
     <a href="#archive">Archive</a>
     <a href="#about">About</a>
     <a class="cta" href="https://silverlenz.github.io/Support-the-Daily-Transmissions/" target="_blank" rel="noopener noreferrer">Support the art ↗</a>
@@ -204,14 +206,14 @@ footer a:hover{color:var(--gold)}
     <div class="hero-inner">
       <p class="kicker">Sacred geometry · sound · myth</p>
       <h1>ZACK COVELL<span class="thin">the pattern observatory</span></h1>
-      <p class="hero-sub">Three hundred and two digital works, made between 2011 and 2015 and still moving. Circles, ratios, symbols and sound, drawn from the same quiet mystery - one transmission at a time.</p>
+      <p class="hero-sub">Three hundred and two digital works, made between 2011 and 2015 and still moving. Circles, ratios, symbols and sound, drawn from the same quiet mystery.</p>
       <div class="hero-cta">
         <a class="btn btn-gold" href="#archive">Enter the archive ↓</a>
-        <a class="btn btn-ghost" href="#transmission">What is transmitting now</a>
+        <a class="btn btn-ghost" href="#transmission">See what is in the frame</a>
       </div>
       <div class="hero-stats">
         <div class="stat"><b id="statWorks">302</b><span>works</span></div>
-        <div class="stat"><b>4 hrs</b><span>transmission cadence</span></div>
+        <div class="stat"><b>4 hrs</b><span>archive rotation</span></div>
         <div class="stat"><b>2011-15</b><span>years made</span></div>
         <div class="stat"><b>$5-50</b><span>prints</span></div>
       </div>
@@ -227,15 +229,15 @@ footer a:hover{color:var(--gold)}
           <figcaption><b id="transTitle">…</b><span id="transNo"></span></figcaption>
         </figure>
         <div class="trans-copy">
-          <p class="sec-kicker">Live from the archive</p>
-          <h2>Now transmitting.</h2>
-          <p class="t-label">Every four hours the archive rotates and a different piece steps forward. This is the work on the air right now.</p>
-          <div class="countdown" aria-label="Time until the next transmission">
+          <p class="sec-kicker">From the archive</p>
+          <h2>The rotation.</h2>
+          <p class="t-label">Every four hours the archive turns and a different work steps into the frame - a slow wander through all 302 pieces.</p>
+          <div class="countdown" aria-label="Time until the rotation changes">
             <div class="cd-cell"><b id="cdH">-</b><span>hours</span></div>
             <div class="cd-cell"><b id="cdM">-</b><span>minutes</span></div>
             <div class="cd-cell"><b id="cdS">-</b><span>seconds</span></div>
           </div>
-          <p class="t-note">The rotation runs on the same four-hour cadence as the daily transmissions posted across the social channels. When the counter reaches zero, a new piece takes the frame.</p>
+          <p class="t-note">No two visits need look the same. When the counter reaches zero, a new piece takes the frame.</p>
         </div>
       </div>
     </div>
@@ -282,7 +284,7 @@ footer a:hover{color:var(--gold)}
     <div class="shell">
       <p class="sec-kicker">Keep the art moving</p>
       <h2>Zap ⚡ if it resonates.</h2>
-      <p class="sec-lede">The art goes out in regular transmissions, free for everyone. If a piece stays with you, share it, follow along, or send a zap - instant, no fees, no account required.</p>
+      <p class="sec-lede">The art has always been free to see and share. If a piece stays with you, pass it on, follow along, or send a zap.</p>
       <div class="zap-ring">
         <a class="zap-btn" href="https://silverlenz.github.io/zack-zaps/" target="_blank" rel="noopener noreferrer" aria-label="Zap Zack on Nostr">⚡<small>Zap now</small></a>
       </div>
@@ -398,7 +400,7 @@ function initTransmission(works){
     img.src=w.full;
     img.alt=w.title+" - digital artwork by Zack Covell";
     ttl.textContent=w.title;
-    no.textContent="TRANSMISSION #"+w.n+" / "+works.length;
+    no.textContent="WORK #"+w.n+" / "+works.length;
   }
   function tick(){
     const next=(Math.floor(Date.now()/SLOT)+1)*SLOT;
